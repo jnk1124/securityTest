@@ -1,17 +1,17 @@
 package com.jnk1124.securitytest.account;
 
-import lombok.Generated;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Getter @Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Entity
 public class Account {
 
-    @Id @Generated
+    @Id @GeneratedValue
     private Long id;
     private String username;
     private String password;
